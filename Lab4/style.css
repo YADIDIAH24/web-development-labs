@@ -1,0 +1,209 @@
+/* General styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #8B0000;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header img {
+    max-width: 140px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+/* Form Styling */
+form {
+    background-color: #fff;
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 600px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #444;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+    border-color: #8B0000;
+    box-shadow: 0 0 8px rgba(139, 0, 0, 0.3);
+    outline: none;
+}
+
+/* Gender Radio Button Styling */
+.gender-options {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.gender-options span {
+    font-weight: bold;
+    color: #444;
+}
+
+input[type="radio"] {
+    accent-color: #8B0000;
+    transform: scale(1.2);
+    margin-right: 5px;
+}
+
+/* Submit Button */
+input[type="submit"], 
+button {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #8B0000;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+input[type="submit"]:hover, 
+button:hover {
+    background-color: #b71c1c;
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+input[type="submit"]:active, 
+button:active {
+    transform: scale(0.98);
+}
+
+/* Password Strength Indicator */
+#passwordStrength {
+    height: 8px;
+    width: 100%;
+    margin-top: 5px;
+    border-radius: 4px;
+    background: #ddd;
+    transition: background 0.3s ease-in-out;
+}
+.weak { background: #ff4d4d; }
+.medium { background: #ffcc00; }
+.strong { background: #4caf50; }
+
+/* GPA Calculator Section */
+#gpaCalculator {
+    display: none;
+    background: #fff;
+    padding: 20px;
+    margin: 20px auto;  /* Centers horizontally */
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease-in-out;
+    width: 80%;
+    max-width: 600px;  /* Ensures it doesn’t get too wide on large screens */
+    text-align: center; /* Centers content inside */
+}
+
+
+#gpaCalculator.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#toggleGPA {
+    background-color: #444;
+    margin: 20px auto;
+    width: 50%;
+}
+
+#toggleGPA:hover {
+    background-color: #333;
+}
+
+/* Typography */
+h2 {
+    text-align: center;
+    font-weight: bold;
+    color: #8B0000;
+    margin-bottom: 30px;
+}
+
+/* Error Messages */
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: -10px;
+    display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header img {
+        margin-top: 15px;
+    }
+
+    form {
+        padding: 20px;
+        margin: 15px;
+    }
+
+    #toggleGPA {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    form {
+        padding: 15px;
+    }
+
+    input {
+        font-size: 14px;
+    }
+
+    input[type="submit"], button {
+        padding: 12px;
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="header">
+    <h1>Register for Canadian University Dubai</h1>
+    <img src="cudlogo.png" alt="Canadian University Dubai Logo">
+  </div>
+  
+  <h2>Applicant Information</h2>
+  <form id="registrationForm">
+    <label for="fname">Full Name *</label>
+    <input type="text" id="fname" name="fname" required>
+    <span class="error" id="nameError"></span>
+    
+    <label for="email">Email *</label>
+    <input type="email" id="email" name="email" required>
+    <span class="error" id="emailError"></span>
+    
+    <label for="password">Password *</label>
+    <input type="password" id="password" name="password" required>
+    <span class="error" id="passwordError"></span>
+    <div id="passwordStrength"></div>
+    
+    <label for="age">Age *</label>
+    <input type="number" id="age" name="age" required>
+    <span class="error" id="ageError"></span>
+    
+    <label for="phone">Phone *</label>
+    <input type="text" id="phone" name="phone" required>
+    <span class="error" id="phoneError"></span>
+    
+    <input type="submit" value="Submit">
+  </form>
+
+  <button id="toggleGPA">Toggle GPA Calculator</button>
+  <div id="gpaCalculator" style="display: none;">
+    <h3>GPA Calculator</h3>
+    <div id="gpaInputs"></div>
+    <button id="calculateGPA">Calculate GPA</button>
+    <p id="gpaResult"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
